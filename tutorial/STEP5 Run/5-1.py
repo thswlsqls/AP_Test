@@ -11,7 +11,7 @@ personalize = boto3.client('personalize')
 #사용자 ID의 경우 학습 데이터에서 가져온 사용자 ID(예123:)를 전달합니다.
 
 response = personalizeRt.get_recommendations(
-    campaignArn = 'Campaign ARN',
+    campaignArn = 'arn:aws:personalize:ap-northeast-2:962369067237:campaign/my-campaign-v1-20240129',
     userId = '123',
     numResults = 10
 )
