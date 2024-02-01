@@ -10,7 +10,7 @@ response = personalize.list_recipes()
 #     print (recipe)
 
 response = personalizeRt.get_recommendations(
-    campaignArn = 'arn:aws:personalize:ap-northeast-2:962369067237:campaign/campaignName4_2104',
+    campaignArn = 'arn:aws:personalize:ap-northeast-2:962369067237:campaign/my-campaign-v2-20240201',
     userId = '123',
     numResults = 10
 )
