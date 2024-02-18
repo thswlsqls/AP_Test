@@ -16,6 +16,34 @@ response = personalizeRt.get_recommendations(
     numResults = 10
 )
 
+# dataset-group-shopnt-20240130
+responseShopnt = personalizeRt.get_recommendations(
+    campaignArn = 'arn:aws:personalize:ap-northeast-2:962369067237:campaign/campaign-shopnt-v1-20240130',
+    userId = '510',
+    numResults = 10
+)
+
+# dataset-group-hmall-20240217
+responseHmall = personalizeRt.get_recommendations(
+    campaignArn = 'arn:aws:personalize:ap-northeast-2:962369067237:campaign/my-campaign-hmall-20240218',
+    userId = '880',
+    numResults = 10
+)
+
 print("Recommended items")
 for item in response['itemList']:
     print (item['itemId'])
+
+# dataset-group-shopnt-20240130
+print("shopnt Recommended items")
+for item in responseShopnt['itemList']:
+    print (item['itemId'])
+
+# dataset-group-hmall-20240217
+print("hmall Recommended items")
+for item in responseHmall['itemList']:
+    print (item['itemId'])
+
+
+
+
